@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GGA//Clase//ES
+BEGIN:VEVENT
+UID:clase-piloto-20261121@gga
+DTSTAMP:20261104T000000Z
+DTSTART:20261121T170000Z
+DTEND:20261121T183000Z
+SUMMARY:Deja de vivir en piloto automático · clase con Gabriela Gonzalo
+DESCRIPTION:El enlace de Zoom llega por correo y por el grupo de WhatsApp.
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:La clase empieza en una hora
+END:VALARM
+END:VEVENT
+END:VCALENDAR
