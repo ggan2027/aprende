@@ -184,6 +184,8 @@ function desbloquear(autoplay){
   }
   window.scrollTo({top:0,behavior:'smooth'});
 }
+// el enlace del correo (?acceso=1) abre la clase en cualquier dispositivo: quien lo tiene ya se registró
+try{if(new URLSearchParams(location.search).has('acceso')){try{localStorage.setItem(LLAVE,'1')}catch(x){}}}catch(e){}
 try{if(localStorage.getItem(LLAVE))desbloquear(false);}catch(e){}
 
 // cuenta atrás real hasta el directo (sábado 21-nov-2026, 17:00 UTC)
