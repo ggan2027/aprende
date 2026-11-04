@@ -13,24 +13,32 @@
 :root{--marfil:#FBF7F0;--arena:#EFE6D6;--obsidiana:#17140F;--tierra:#3E2B1F;--dorado:#8F6A2F;--dorado-claro:#C9A25E;--arcilla:#A4553A;--salvia:#5F6F52;--texto:#2A231B;--suave:#6B5F50;--linea:#DCCFB9}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--marfil);color:var(--texto);font:400 17px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-.wrap{max-width:620px;margin:0 auto;padding:28px 16px 64px}
+.wrap{max-width:940px;margin:0 auto;padding:28px 16px 64px}
+.estrecho,.sin,.bajo,.hecho,.pie,h1{max-width:620px;margin-left:auto;margin-right:auto}
+@media(min-width:900px){.wrap{padding-top:40px}}
 .eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--dorado);font-weight:600;text-align:center}
-h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(30px,7.6vw,46px);line-height:1.1;margin:10px 0 12px;color:var(--obsidiana);text-align:center}
+h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(30px,7.6vw,46px);line-height:1.1;margin:10px auto 12px;color:var(--obsidiana);text-align:center}
 h1 em{font-style:normal;color:var(--arcilla)}
 .sin{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 18px;font-weight:500;font-size:16px;margin-bottom:18px}
 .sin span:before{content:"✕ ";color:var(--arcilla);font-weight:600}
 /* el vídeo bloqueado */
 .bloq{position:relative;display:block;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;border:0;padding:0;cursor:pointer;
   background:radial-gradient(120% 90% at 30% 20%,#6a4a33 0%,#3E2B1F 45%,#17140F 100%);color:#F3EBDD;font:inherit;box-shadow:0 14px 40px rgba(23,20,15,.25)}
-.bloq img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(3px) brightness(.55)}
-.bloq .capa{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px;text-align:center}
-.bloq .play{width:74px;height:74px;border-radius:50%;background:rgba(251,247,240,.14);border:2px solid rgba(251,247,240,.7);display:flex;align-items:center;justify-content:center}
+.bloq img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.92)}
+.bloq .capa{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:10px;padding:16px 16px 7%;text-align:center}
+.bloq .play{width:62px;height:62px;backdrop-filter:blur(4px);border-radius:50%;background:rgba(251,247,240,.14);border:2px solid rgba(251,247,240,.7);display:flex;align-items:center;justify-content:center}
 .bloq .play svg{width:30px;height:30px;margin-left:5px;fill:#FBF7F0}
 .bloq .btn{background:var(--arcilla);color:#fff;font-weight:600;font-size:16px;padding:11px 20px;border-radius:999px;display:inline-flex;gap:8px;align-items:center;animation:late 2.4s ease-in-out infinite}
 .bloq .dur{position:absolute;right:12px;bottom:10px;background:rgba(23,20,15,.7);font-size:13px;padding:2px 8px;border-radius:6px}
+@media(max-width:600px){.bloq .play{display:none}.bloq .btn{font-size:15px;padding:9px 16px}.bloq .capa{padding-bottom:5%}.bloq .dur{top:10px;bottom:auto}}
 @keyframes late{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
 @media (prefers-reduced-motion:reduce){.bloq .btn{animation:none}}
-.bajo{text-align:center;font-size:14px;color:var(--suave);margin-top:10px}
+.bajo{text-align:center;font-size:15px;color:var(--suave);margin-top:12px}
+.bajo b{color:var(--texto);font-weight:600}
+.pasos{list-style:none;margin:12px 0 4px;counter-reset:p}
+.pasos li{counter-increment:p;position:relative;padding:6px 0 6px 38px}
+.pasos li:before{content:counter(p);position:absolute;left:0;top:6px;width:26px;height:26px;border-radius:50%;background:var(--arena);color:var(--tierra);font:600 14px/26px Inter,sans-serif;text-align:center}
+.aviso{background:var(--arena);border-radius:10px;padding:12px 14px;margin-top:10px;font-size:15.5px}
 .ir{display:block;text-align:center;margin:18px 0 4px;padding:16px;font:600 17px Inter,sans-serif;color:#fff;background:var(--arcilla);border-radius:12px;text-decoration:none;border:0;width:100%;cursor:pointer}
 h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:26px;margin:40px 0 12px;color:var(--obsidiana)}
 .perfiles{display:grid;gap:10px}
@@ -87,25 +95,30 @@ body.abierta .reproductor,body.abierta .hecho{display:block}
 </head>
 <body>
 <main class="wrap">
-  <div class="eyebrow">Clase gratuita · 12 minutos</div>
+  <div class="eyebrow">Clase gratuita de 12 minutos</div>
   <h1>Deja de vivir en <em>piloto automático</em></h1>
   <div class="sin"><span>Sin dejar tu trabajo</span><span>Sin irte a un retiro</span></div>
 
-  <!-- PÓSTER: cuando llegue el vídeo de PRODUCCIÓN, sacar un fotograma (ffmpeg -ss 00:00:08 -i clase.mp4 -frames:v 1 poster.jpg) y quitar el comentario de la <img> -->
+  <!-- PÓSTER: foto suya de ChatGPT del 3-nov recortada (RVM) sobre jardín generado en local (FLUX.2 klein). No es su casa. -->
   <button class="bloq" id="abrir1" type="button" aria-label="Desbloquear la clase gratuita">
-    <!-- <img src="poster.jpg" alt=""> -->
+    <img src="poster.jpg" alt="Gabriela Gonzalo en la clase gratuita">
     <span class="capa">
       <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></span>
       <span class="btn">🔒 Desbloquear la clase gratis</span>
     </span>
     <span class="dur">12:00</span>
   </button>
-  <p class="bajo">Deja tus datos y se abre al momento. Gratis.</p>
+  <p class="bajo">Deja tus datos y la clase se abre al momento.<br><b>Con el mismo registro tienes plaza en el directo del sábado 21 de noviembre.</b> Todo gratis.</p>
 
   <div class="reproductor" id="reproductor"></div>
   <div class="hecho" id="hecho">
-    <h3>Ya la tienes. Y tienes plaza para el directo.</h3>
-    <p>El <b>sábado 21 de noviembre a las 18:00 de Madrid</b> hacemos la clase completa en directo, con la práctica de 10 minutos y tus preguntas. Te mando el enlace al correo y al grupo.</p>
+    <h3>Ya tienes tu plaza en el directo</h3>
+    <p class="aviso">Al final de la clase te invito al directo del sábado 21. <b>Ya estás dentro con el registro que acabas de hacer: no tienes que registrarte otra vez.</b></p>
+    <ol class="pasos">
+      <li><b>Mira la clase</b> de arriba: son 12 minutos.</li>
+      <li><b>Entra al grupo de WhatsApp.</b> Ahí mando el enlace del Zoom el mismo sábado.</li>
+      <li><b>Guarda la fecha:</b> sábado 21 de noviembre, 18:00 de Madrid. En directo hacemos la práctica de 10 minutos y respondo tus preguntas.</li>
+    </ol>
     <a class="ir" id="grupo" href="WHATSAPP_GRUPO_URL">Entrar al grupo de WhatsApp de la clase</a>
     <a class="sec" href="../clase-21-nov.ics">Añadir el sábado 21 a mi calendario</a>
     <div class="vivo">
@@ -122,7 +135,7 @@ body.abierta .reproductor,body.abierta .hecho{display:block}
   <form id="registro" method="POST" action="https://bbf2f8a8.sibforms.com/serve/MUIFAH6SikKFY8eR9vngQDJAhDz6P4fhBxDB4BvK8kq2AAp1R9E6-foSxxegm78ZURj4POZa41agleL01jTpEwa0mF0BNVM7ONNyViW_m2RRMre80tWt3sr9MybQPDxdOz4uSQIsrFRrmIEPGHCqfUm66Ws8M-Lx3vCEYhx-ofnCEcPeD-CS-7esiOHsiWyT7DoFOyUBwoIYXseZVQ==" novalidate>
     <button class="cerrar" type="button" id="cerrar" aria-label="Cerrar">×</button>
     <h3 id="tit">¿A dónde te mando la clase?</h3>
-    <p class="sub">Se abre en cuanto pulses el botón.</p>
+    <p class="sub">Se abre en cuanto pulses el botón. Y te guardo plaza en el directo del sábado 21.</p>
     <label for="nombre">Tu nombre</label>
     <input type="text" id="nombre" name="FIRSTNAME" autocomplete="given-name" required>
     <label for="email">Tu correo</label>
@@ -144,7 +157,7 @@ body.abierta .reproductor,body.abierta .hecho{display:block}
 const YOUTUBE_ID = '';
 // Opción B · archivo propio: pon la ruta del .mp4 (máx. ~90 MB en GitHub).
 const MP4 = '';
-const POSTER = '';
+const POSTER = 'poster.jpg';
 // ===================================
 const LLAVE='gga-piloto-abierta';
 const body=document.body, velo=document.getElementById('velo'), f=document.getElementById('registro'),
