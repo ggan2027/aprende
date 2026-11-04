@@ -120,7 +120,7 @@ body.abierta .reproductor,body.abierta .hecho{display:block}
       <li><b>Entra a El Círculo · Aprende con Gabriela</b>, mi comunidad de WhatsApp. Ahí mando el enlace del Zoom el mismo sábado.</li>
       <li><b>Guarda la fecha:</b> sábado 21 de noviembre, 18:00 de Madrid. En directo hacemos la práctica de 10 minutos y respondo tus preguntas.</li>
     </ol>
-    <a class="ir" id="grupo" href="WHATSAPP_GRUPO_URL">Entrar a El Círculo en WhatsApp</a>
+    <a class="ir" id="grupo" href="#" target="_blank" rel="noopener">Entrar a El Círculo en WhatsApp</a>
     <a class="sec" href="../clase-21-nov.ics">Añadir el sábado 21 a mi calendario</a>
     <div class="vivo">
       <b>Sábado 21 de noviembre · 18:00 de Madrid · Zoom, gratis</b>
@@ -171,8 +171,10 @@ document.getElementById('cerrar').onclick=cerrarForm;
 velo.addEventListener('click',e=>{if(e.target===velo)cerrarForm();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')cerrarForm();});
 
+function waUrl(){try{return atob('DFnNzUkaY5kSiZDVmFENIt2bpRnbE9SbvNmLwBXYzRXYodnL0FGaj9yL6MHc0RHa'.split('').reverse().join(''))}catch(e){return '#'}}
 function desbloquear(autoplay){
   body.classList.add('abierta');
+  document.getElementById('grupo').href=waUrl();
   if(YOUTUBE_ID){
     rep.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+YOUTUBE_ID+'?rel=0&modestbranding=1&playsinline=1'+(autoplay?'&autoplay=1':'')+'" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="Clase gratuita"></iframe>';
   }else if(MP4){
