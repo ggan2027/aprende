@@ -109,21 +109,21 @@ body.abierta .reproductor,body.abierta .hecho{display:block}
     </span>
     <span class="dur">12:00</span>
   </button>
-  <p class="bajo">Deja tus datos y la clase se abre al momento.<br><b>Con el mismo registro tienes plaza en el directo del sábado 21 de noviembre.</b> Todo gratis.</p>
+  <p class="bajo">Deja tus datos y la clase se abre al momento.<br><b>Con el mismo registro tienes plaza en el directo del martes 24 de noviembre.</b> Todo gratis.</p>
 
   <div class="reproductor" id="reproductor"></div>
   <div class="hecho" id="hecho">
     <h3>Ya tienes tu plaza en el directo</h3>
     <a class="ir" id="grupo" href="#" target="_blank" rel="noopener">Entrar a El Círculo en WhatsApp</a>
-    <p class="aviso">Al final de la clase te invito al directo del sábado 21. <b>Ya estás dentro con el registro que acabas de hacer: no tienes que registrarte otra vez.</b></p>
+    <p class="aviso">Al final de la clase te invito al directo del martes 24. <b>Ya estás dentro con el registro que acabas de hacer: no tienes que registrarte otra vez.</b></p>
     <ol class="pasos">
       <li><b>Mira la clase</b> de arriba: son 12 minutos.</li>
-      <li><b>Entra a El Círculo · Aprende con Gabriela</b>, mi comunidad de WhatsApp. Ahí mando el enlace del Zoom el mismo sábado.</li>
-      <li><b>Guarda la fecha:</b> sábado 21 de noviembre, 18:00 de Madrid. En directo hacemos la práctica de 10 minutos y respondo tus preguntas.</li>
+      <li><b>Entra a El Círculo · Aprende con Gabriela</b>, mi comunidad de WhatsApp. Ahí mando el enlace del Zoom el mismo martes.</li>
+      <li><b>Guarda la fecha:</b> martes 24 de noviembre, 20:00 de Madrid. En directo hacemos la práctica de 10 minutos y respondo tus preguntas.</li>
     </ol>
-    <a class="sec" href="../clase-21-nov.ics">Añadir el sábado 21 a mi calendario</a>
+    <a class="sec" href="../clase-24-nov.ics">Añadir el martes 24 a mi calendario</a>
     <div class="vivo">
-      <b>Sábado 21 de noviembre · 18:00 de Madrid · Zoom, gratis</b>
+      <b>Martes 24 de noviembre · 20:00 de Madrid · Zoom, gratis</b>
       <small>12:00 Miami y Bogotá · 11:00 Ciudad de México · 14:00 Buenos Aires y Santiago</small>
       <div class="cuenta" id="cuenta" aria-label="Tiempo hasta el directo"></div>
     </div>
@@ -136,7 +136,7 @@ body.abierta .reproductor,body.abierta .hecho{display:block}
   <form id="registro" method="POST" action="https://bbf2f8a8.sibforms.com/serve/MUIFAH6SikKFY8eR9vngQDJAhDz6P4fhBxDB4BvK8kq2AAp1R9E6-foSxxegm78ZURj4POZa41agleL01jTpEwa0mF0BNVM7ONNyViW_m2RRMre80tWt3sr9MybQPDxdOz4uSQIsrFRrmIEPGHCqfUm66Ws8M-Lx3vCEYhx-ofnCEcPeD-CS-7esiOHsiWyT7DoFOyUBwoIYXseZVQ==" novalidate>
     <button class="cerrar" type="button" id="cerrar" aria-label="Cerrar">×</button>
     <h3 id="tit">¿A dónde te mando la clase?</h3>
-    <p class="sub">Se abre en cuanto pulses el botón. Y te guardo plaza en el directo del sábado 21.</p>
+    <p class="sub">Se abre en cuanto pulses el botón. Y te guardo plaza en el directo del martes 24.</p>
     <label for="nombre">Tu nombre</label>
     <input type="text" id="nombre" name="FIRSTNAME" autocomplete="given-name" required>
     <label for="email">Tu correo</label>
@@ -188,7 +188,7 @@ function desbloquear(autoplay){
 try{if(new URLSearchParams(location.search).has('acceso')){try{localStorage.setItem(LLAVE,'1')}catch(x){}}}catch(e){}
 try{if(localStorage.getItem(LLAVE))desbloquear(false);}catch(e){}
 
-// cuenta atrás real hasta el directo (sábado 21-nov-2026, 17:00 UTC)
+// cuenta atrás real hasta el directo (martes 24-nov-2026, 19:00 UTC)
 const DIRECTO=Date.UTC(2026,10,21,17,0,0);
 function cuenta(){
   const ms=DIRECTO-Date.now(), c=document.getElementById('cuenta');

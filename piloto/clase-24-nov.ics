@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GGA//Clase//ES
+BEGIN:VEVENT
+UID:clase-piloto-20261124@gga
+DTSTAMP:20261105T000000Z
+DTSTART:20261124T190000Z
+DTEND:20261124T203000Z
+SUMMARY:Deja de vivir en piloto automático · masterclass con Gabriela Gonzalo
+DESCRIPTION:El enlace de Zoom llega por correo y por el grupo de WhatsApp.
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:La masterclass empieza en una hora
+END:VALARM
+END:VEVENT
+END:VCALENDAR
