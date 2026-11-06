@@ -103,7 +103,18 @@ f.addEventListener('submit',async e=>{
   if(msg){err.textContent=msg;err.style.display='block';return;}
   if(f.email_address_check.value) return;
   btn.disabled=true;btn.textContent='Guardando tu plaza…';
-  const d=new URLSearchParams();d.set('FIRSTNAME',f.FIRSTNAME.value.trim());d.set('EMAIL',f.EMAIL.value.trim());d.set('WHATSAPP__COUNTRY_CODE',f.WHATSAPP__COUNTRY_CODE.value);d.set('WHATSAPP',wa);d.set('email_address_check','');d.set('locale','es');
+
+// origen de la persona: ?o=ig-dm, ?o=whatsapp, ?o=bio, ?o=correo, ?o=youtube... Se guarda al llegar
+// para que no se pierda si navega dentro de la pagina. Sin parametro: 'directo'.
+function origen(){
+  var k='gga-origen', v='';
+  try{v=new URLSearchParams(location.search).get('o')||''}catch(e){}
+  v=(v||'').replace(/[^a-zA-Z0-9_-]/g,'').slice(0,40);
+  try{ if(v) localStorage.setItem(k,v); else v=localStorage.getItem(k)||''; }catch(e){}
+  return v||'directo';
+}
+
+  const d=new URLSearchParams();d.set('FIRSTNAME',f.FIRSTNAME.value.trim());d.set('EMAIL',f.EMAIL.value.trim());d.set('WHATSAPP__COUNTRY_CODE',f.WHATSAPP__COUNTRY_CODE.value);d.set('WHATSAPP',wa);d.set('email_address_check','');d.set('locale','es');d.set('GGA_SOURCE',origen());d.set('GGA_CAMPAIGN','MASTERCLASS-24NOV');
   try{await fetch(f.action,{method:'POST',mode:'no-cors',body:d});location.href='gracias.html';}
   catch(x){btn.disabled=false;btn.textContent='Quiero mi plaza';err.textContent='No se pudo guardar. Revisa tu conexión y vuelve a intentarlo.';err.style.display='block';}
 });
