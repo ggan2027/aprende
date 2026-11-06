@@ -189,7 +189,7 @@ try{if(new URLSearchParams(location.search).has('acceso')){try{localStorage.setI
 try{if(localStorage.getItem(LLAVE))desbloquear(false);}catch(e){}
 
 // cuenta atrás real hasta el directo (martes 24-nov-2026, 19:00 UTC)
-const DIRECTO=Date.UTC(2026,10,21,17,0,0);
+const DIRECTO=Date.UTC(2026,10,24,19,0,0);
 function cuenta(){
   const ms=DIRECTO-Date.now(), c=document.getElementById('cuenta');
   if(ms<=0){c.innerHTML='';return;}
