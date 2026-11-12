@@ -5,13 +5,35 @@
 <style>body{margin:0;background:#14110D;color:#EDE4D3;font:17px/1.6 Inter,system-ui,sans-serif}main{max-width:620px;margin:0 auto;padding:40px 20px 64px}
 .marca{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#C9A062}h1{font:500 clamp(32px,8vw,46px)/1.1 Fraunces,Georgia,serif;margin:10px 0 16px}
 audio{width:100%;margin:22px 0 10px}a{color:#C9A062}ul{padding-left:20px}li{margin-bottom:6px}.pie{margin-top:40px;font-size:13px;color:#A69B88;border-top:1px solid #352C22;padding-top:16px}
-.btn{display:inline-block;margin-top:6px;padding:12px 16px;border:1px solid #C9A062;border-radius:10px;text-decoration:none}</style></head>
+.btn{display:inline-block;margin-top:6px;padding:12px 16px;border:1px solid #C9A062;border-radius:10px;text-decoration:none}
+form{margin:26px 0 8px;padding:22px 18px;background:#1E1913;border:1px solid #352C22;border-radius:14px}
+label.t{display:block;font-size:14px;font-weight:600;margin:12px 0 6px}
+input[type=text],input[type=email]{width:100%;box-sizing:border-box;padding:13px 14px;font:16px Inter,system-ui,sans-serif;color:#17140F;background:#F6EFE3;border:1px solid #C9A062;border-radius:10px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.5;color:#CFC4B1;margin-top:16px}.check input{margin-top:3px;width:18px;height:18px;flex:none}
+button{margin-top:18px;width:100%;padding:15px;font:600 16px Inter,system-ui,sans-serif;color:#14110D;background:#C9A062;border:0;border-radius:10px;cursor:pointer}button:disabled{opacity:.6}
+.err{display:none;margin-top:12px;color:#F2A38A;font-size:14px}.hp{position:absolute;left:-9999px}
+#viaje{display:none}.ok{color:#C9A062;font-size:15px}</style></head>
 <body><main>
 <div class="marca">BioAncestral Sound · Gabriela Gonzalo</div>
 <h1>Tu primer viaje de tambor</h1>
 <p>Casi 19 minutos: primero te explico cómo es el viaje, después suena mi tambor y, al final, la llamada de regreso.</p>
-<audio controls preload="none" src="tu-primer-viaje-de-tambor.mp3"></audio>
-<p><a class="btn" href="tu-primer-viaje-de-tambor.mp3" download>Descargar el MP3 (27 MB)</a></p>
+
+<form id="registro" method="POST" action="https://bbf2f8a8.sibforms.com/serve/MUIFAFE9_OZT4oODW-KXJmHwhyj_2ZRGMoWlwj20vyx3deRXZbwTeOVoSxrHj4ezGyHx8BHK8tvsNYTHXxaxuwY30R3xwlyx9I_9zyxw23BkjM6tdGrMTVZqRnPrTC8kd1KTVGDHJ28YMY3Y2IPmnsNsEPYBedp1gnuHzhUsJIguuniRIWukJ_cKGWCq2wn_gm82kII9b9h_JZCD6g==" novalidate>
+  <p style="margin:0 0 4px"><b>Dime a dónde te lo mando y se desbloquea aquí mismo.</b></p>
+  <label class="t" for="n">Tu nombre</label><input id="n" type="text" name="FIRSTNAME" autocomplete="given-name" required>
+  <label class="t" for="e">Tu correo</label><input id="e" type="email" name="EMAIL" autocomplete="email" required>
+  <input class="hp" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off">
+  <label class="check"><input type="checkbox" name="OPT_IN" value="1" required><span>Acepto recibir por correo este viaje y contenido de Gabriela Gonzalo: viajes y sonidos nuevos, libros, clases y programas. Puedo darme de baja cuando quiera. Leí la <a href="/privacidad/" target="_blank">política de privacidad</a>.</span></label>
+  <button id="enviar" type="submit">Desbloquear mi viaje</button>
+  <div class="err" id="error"></div>
+</form>
+
+<section id="viaje">
+<p class="ok">Listo. Te he mandado un correo para confirmar tu dirección; el viaje ya lo tienes aquí.</p>
+<audio id="audio" controls preload="none"></audio>
+<p><a class="btn" id="bajar" download>Descargar el MP3 (27 MB)</a></p>
+</section>
+
 <ul>
 <li>Busca un rato de 20 minutos en el que nadie te interrumpa y deja el teléfono en silencio.</li>
 <li>Túmbate o siéntate como estés a gusto, y cúbrete los ojos si puedes.</li>
@@ -19,5 +41,25 @@ audio{width:100%;margin:22px 0 10px}a{color:#C9A062}ul{padding-left:20px}li{marg
 <li>Si en algún momento quieres volver, abres los ojos. Siempre puedes.</li>
 </ul>
 <p>Cada semana hay un viaje nuevo en el canal: <a href="https://www.youtube.com/@BioAncestralSound?sub_confirmation=1">youtube.com/@BioAncestralSound</a></p>
-<p class="pie">Tambor real grabado por Gabriela Gonzalo. Esto es una práctica, no un tratamiento, y no sustituye a tu médico ni a tu terapeuta.</p>
-</main></body></html>
+<p class="pie">Tambor real grabado por Gabriela Gonzalo. Esto es una práctica, no un tratamiento, y no sustituye a tu médico ni a tu terapeuta. · <a href="/privacidad/">Privacidad</a></p>
+</main>
+<script>
+var K='gga-tambor-ok',f=document.getElementById('registro'),err=document.getElementById('error'),btn=document.getElementById('enviar');
+function abrir(){var a='tu-primer-viaje-de-tambor.mp3';document.getElementById('audio').src=a;document.getElementById('bajar').href=a;
+  f.style.display='none';document.getElementById('viaje').style.display='block';try{localStorage.setItem(K,'1')}catch(e){}}
+var ya=false;try{ya=localStorage.getItem(K)==='1'||new URLSearchParams(location.search).get('ok')==='1'}catch(e){}
+if(ya)abrir();
+f.addEventListener('submit',async function(e){
+  e.preventDefault();err.style.display='none';var msg='';
+  if(!f.FIRSTNAME.value.trim())msg='Falta tu nombre.';
+  else if(!/^\S+@\S+\.\S+$/.test(f.EMAIL.value.trim()))msg='Revisa el correo.';
+  else if(!f.OPT_IN.checked)msg='Marca la casilla para poder mandártelo.';
+  if(msg){err.textContent=msg;err.style.display='block';return;}
+  if(f.email_address_check.value)return;
+  btn.disabled=true;btn.textContent='Desbloqueando…';
+  var d=new URLSearchParams();d.set('FIRSTNAME',f.FIRSTNAME.value.trim());d.set('EMAIL',f.EMAIL.value.trim());d.set('OPT_IN','1');d.set('email_address_check','');d.set('locale','es');
+  try{await fetch(f.action,{method:'POST',mode:'no-cors',body:d});abrir();}
+  catch(x){btn.disabled=false;btn.textContent='Desbloquear mi viaje';err.textContent='No se pudo guardar. Revisa tu conexión y vuelve a intentarlo.';err.style.display='block';}
+});
+</script>
+</body></html>
