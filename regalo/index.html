@@ -22,7 +22,7 @@ button{margin-top:18px;width:100%;padding:15px;font:600 16px Inter,system-ui,san
   <p style="margin:0 0 4px"><b>Dime a dónde te lo mando y se desbloquea aquí mismo.</b></p>
   <label class="t" for="n">Tu nombre</label><input id="n" type="text" name="FIRSTNAME" autocomplete="given-name" required>
   <label class="t" for="e">Tu correo</label><input id="e" type="email" name="EMAIL" autocomplete="email" required>
-  <input class="hp" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off">
+  <input class="hp" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="new-password" aria-hidden="true">
   <label class="check"><input type="checkbox" name="OPT_IN" value="1" required><span>Acepto recibir por correo este viaje y contenido de Gabriela Gonzalo: viajes y sonidos nuevos, libros, clases y programas. Puedo darme de baja cuando quiera. Leí la <a href="/privacidad/" target="_blank">política de privacidad</a>.</span></label>
   <button id="enviar" type="submit">Desbloquear mi viaje</button>
   <div class="err" id="error"></div>
@@ -55,7 +55,7 @@ f.addEventListener('submit',async function(e){
   else if(!/^\S+@\S+\.\S+$/.test(f.EMAIL.value.trim()))msg='Revisa el correo.';
   else if(!f.OPT_IN.checked)msg='Marca la casilla para poder mandártelo.';
   if(msg){err.textContent=msg;err.style.display='block';return;}
-  if(f.email_address_check.value)return;
+  // el campo trampa lo rellena el autocompletado de Chrome: no se usa para bloquear aquí; a Brevo siempre va vacío
   btn.disabled=true;btn.textContent='Desbloqueando…';
   var d=new URLSearchParams();d.set('FIRSTNAME',f.FIRSTNAME.value.trim());d.set('EMAIL',f.EMAIL.value.trim());d.set('OPT_IN','1');d.set('email_address_check','');d.set('locale','es');
   try{await fetch(f.action,{method:'POST',mode:'no-cors',body:d});abrir();}
