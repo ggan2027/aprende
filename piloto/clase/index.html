@@ -221,7 +221,7 @@ function origen(){
   return v||'directo';
 }
 
-  const d=new URLSearchParams();d.set('FIRSTNAME',f.FIRSTNAME.value.trim());d.set('EMAIL',f.EMAIL.value.trim());d.set('WHATSAPP__COUNTRY_CODE',f.WHATSAPP__COUNTRY_CODE.value);d.set('WHATSAPP',wa);d.set('email_address_check','');d.set('locale','es');d.set('GGA_SOURCE',origen());d.set('GGA_CAMPAIGN','MASTERCLASS-24NOV');
+  const d=new URLSearchParams();d.set('FIRSTNAME',f.FIRSTNAME.value.trim());d.set('EMAIL',f.EMAIL.value.trim());d.set('GGA_WHATSAPP',f.WHATSAPP__COUNTRY_CODE.value+' '+wa);d.set('email_address_check','');d.set('locale','es');d.set('GGA_SOURCE',origen());d.set('GGA_CAMPAIGN','MASTERCLASS-1DIC');
   try{
     await fetch(f.action,{method:'POST',mode:'no-cors',body:d});
     try{localStorage.setItem(LLAVE,'1');}catch(x){}
