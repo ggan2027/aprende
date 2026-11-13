@@ -109,34 +109,34 @@ body.abierta .reproductor,body.abierta .hecho{display:block}
     </span>
     <span class="dur">12:00</span>
   </button>
-  <p class="bajo">Deja tus datos y la clase se abre al momento.<br><b>Con el mismo registro tienes plaza en el directo del martes 24 de noviembre.</b> Todo gratis.</p>
+  <!-- Mientras YOUTUBE_ID y MP4 estén vacíos la clase no se abre: se promete el correo. Cuando exista el vídeo, volver a «se abre al momento». -->
+  <p class="bajo">Deja tus datos y te mando la clase al correo en cuanto esté lista.<br><b>Con el mismo registro tienes plaza en el directo de principios de diciembre.</b> Todo gratis.</p>
 
   <div class="reproductor" id="reproductor"></div>
   <div class="hecho" id="hecho">
     <h3>Ya tienes tu plaza en el directo</h3>
     <a class="ir" id="grupo" href="#" target="_blank" rel="noopener">Entrar a El Círculo en WhatsApp</a>
-    <p class="aviso">Al final de la clase te invito al directo del martes 24. <b>Ya estás dentro con el registro que acabas de hacer: no tienes que registrarte otra vez.</b></p>
+    <p class="aviso">Al final de la clase te invito al directo de principios de diciembre. <b>Ya estás dentro con el registro que acabas de hacer: no tienes que registrarte otra vez.</b></p>
     <ol class="pasos">
-      <li><b>Mira la clase</b> de arriba: son 12 minutos.</li>
-      <li><b>Entra a El Círculo · Aprende con Gabriela</b>, mi comunidad de WhatsApp. Ahí mando el enlace del Zoom el mismo martes.</li>
-      <li><b>Guarda la fecha:</b> martes 24 de noviembre, 20:00 de Madrid. En directo hacemos la práctica de 10 minutos y respondo tus preguntas.</li>
+      <li><b>Mira la clase</b>: son 12 minutos. Si aún no está arriba, te llega al correo.</li>
+      <li><b>Entra a El Círculo · Aprende con Gabriela</b>, mi comunidad de WhatsApp. Ahí mando el enlace del Zoom el mismo día.</li>
+      <li><b>El directo es a principios de diciembre.</b> La fecha y la hora en tu país te llegan por El Círculo y por correo. En directo hacemos la práctica de 10 minutos y respondo tus preguntas.</li>
     </ol>
-    <a class="sec" href="../clase-24-nov.ics">Añadir el martes 24 a mi calendario</a>
     <div class="vivo">
-      <b>Martes 24 de noviembre · 20:00 de Madrid · Zoom, gratis</b>
-      <small>14:00 Miami y Bogotá · 13:00 Ciudad de México · 16:00 Buenos Aires y Santiago</small>
+      <b>Principios de diciembre · En directo por Zoom · Gratis</b>
+      <small>La fecha y la hora en tu país te llegan por El Círculo y por correo.</small>
       <div class="cuenta" id="cuenta" aria-label="Tiempo hasta el directo"></div>
     </div>
   </div>
 
-  <p class="pie">Esta clase es educativa y no sustituye atención médica ni psicológica. · <a href="../privacidad.html">Privacidad</a> · @gabrielagonzalo.ancestral</p>
+  <p class="pie">Esta clase es educativa y no sustituye atención médica ni psicológica. · <a href="/privacidad/">Privacidad</a> · @gabrielagonzalo.ancestral</p>
 </main>
 
 <div class="velo" id="velo" role="dialog" aria-modal="true" aria-labelledby="tit">
   <form id="registro" method="POST" action="https://bbf2f8a8.sibforms.com/serve/MUIFAH6SikKFY8eR9vngQDJAhDz6P4fhBxDB4BvK8kq2AAp1R9E6-foSxxegm78ZURj4POZa41agleL01jTpEwa0mF0BNVM7ONNyViW_m2RRMre80tWt3sr9MybQPDxdOz4uSQIsrFRrmIEPGHCqfUm66Ws8M-Lx3vCEYhx-ofnCEcPeD-CS-7esiOHsiWyT7DoFOyUBwoIYXseZVQ==" novalidate>
     <button class="cerrar" type="button" id="cerrar" aria-label="Cerrar">×</button>
     <h3 id="tit">¿A dónde te mando la clase?</h3>
-    <p class="sub">Se abre en cuanto pulses el botón. Y te guardo plaza en el directo del martes 24.</p>
+    <p class="sub">Te la mando al correo en cuanto esté lista. Y te guardo plaza en el directo de principios de diciembre.</p>
     <label for="nombre">Tu nombre</label>
     <input type="text" id="nombre" name="FIRSTNAME" autocomplete="given-name" required>
     <label for="email">Tu correo</label>
@@ -145,8 +145,8 @@ body.abierta .reproductor,body.abierta .hecho{display:block}
     <div style="display:flex;gap:8px"><select id="cc" name="WHATSAPP__COUNTRY_CODE" aria-label="Prefijo del país" style="flex:0 0 42%;padding:14px 8px"><option value="+34">España +34</option><option value="+1">EE. UU. y Canadá +1</option><option value="+52">México +52</option><option value="+57">Colombia +57</option><option value="+54">Argentina +54</option><option value="+56">Chile +56</option><option value="+51">Perú +51</option><option value="+58">Venezuela +58</option><option value="+593">Ecuador +593</option><option value="+598">Uruguay +598</option><option value="+595">Paraguay +595</option><option value="+591">Bolivia +591</option><option value="+506">Costa Rica +506</option><option value="+507">Panamá +507</option><option value="+502">Guatemala +502</option><option value="+503">El Salvador +503</option><option value="+504">Honduras +504</option><option value="+505">Nicaragua +505</option><option value="+1809">Rep. Dominicana +1809</option><option value="+1787">Puerto Rico +1787</option><option value="+53">Cuba +53</option><option value="+351">Portugal +351</option><option value="+44">Reino Unido +44</option><option value="+33">Francia +33</option><option value="+39">Italia +39</option><option value="+49">Alemania +49</option><option value="+41">Suiza +41</option></select>
     <input type="tel" id="wa" name="WHATSAPP" autocomplete="tel-national" inputmode="tel" placeholder="Tu número" required></div>
     <input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" autocomplete="new-password">
-    <label class="check"><input type="checkbox" name="OPT_IN" value="1" required><span>Acepto recibir por correo y WhatsApp la clase, los recordatorios y contenido de Gabriela Gonzalo. Puedo darme de baja cuando quiera. Leí la <a href="../privacidad.html" target="_blank">política de privacidad</a>.</span></label>
-    <button type="submit" class="enviar" id="enviar">Ver la clase ahora</button>
+    <label class="check"><input type="checkbox" name="OPT_IN" value="1" required><span>Acepto recibir por correo y WhatsApp la clase, los recordatorios y contenido de Gabriela Gonzalo. Puedo darme de baja cuando quiera. Leí la <a href="/privacidad/" target="_blank">política de privacidad</a>.</span></label>
+    <button type="submit" class="enviar" id="enviar">Quiero la clase y mi plaza</button>
     <p class="error" id="error"></p>
     <p class="nota">🔒 Tus datos no se comparten con nadie.</p>
   </form>
@@ -188,11 +188,11 @@ function desbloquear(autoplay){
 try{if(new URLSearchParams(location.search).has('acceso')){try{localStorage.setItem(LLAVE,'1')}catch(x){}}}catch(e){}
 try{if(localStorage.getItem(LLAVE))desbloquear(false);}catch(e){}
 
-// cuenta atrás real hasta el directo (martes 24-nov-2026, 19:00 UTC)
-const DIRECTO=Date.UTC(2026,10,24,19,0,0);
+// cuenta atrás hasta el directo (martes 1-dic-2026, 20:00 Madrid = 19:00 UTC); oculta hasta el 18-nov para no adelantar la fecha
+const DIRECTO=Date.UTC(2026,11,1,19,0,0), MOSTRAR=Date.UTC(2026,10,18,0,0,0);
 function cuenta(){
   const ms=DIRECTO-Date.now(), c=document.getElementById('cuenta');
-  if(ms<=0){c.innerHTML='';return;}
+  if(ms<=0||Date.now()<MOSTRAR){c.innerHTML='';return;}
   const d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4);
   c.innerHTML='<div><b>'+d+'</b><span>días</span></div><div><b>'+h+'</b><span>horas</span></div><div><b>'+m+'</b><span>min</span></div>';
 }
@@ -227,7 +227,7 @@ function origen(){
     try{localStorage.setItem(LLAVE,'1');}catch(x){}
     if(window.ggaPx)ggaPx('Lead');
     cerrarForm();desbloquear(true);
-  }catch(x){btn.disabled=false;btn.textContent='Ver la clase ahora';err.textContent='No se pudo guardar. Revisa tu conexión y vuelve a intentarlo.';err.style.display='block';}
+  }catch(x){btn.disabled=false;btn.textContent='Quiero la clase y mi plaza';err.textContent='No se pudo guardar. Revisa tu conexión y vuelve a intentarlo.';err.style.display='block';}
 });
 </script>
 </body>
