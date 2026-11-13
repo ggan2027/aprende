@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Los audios de tus libros · Gabriela Gonzalo Ancestral</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--obs:#17140F;--hueso:#EDE4D3;--oro:#B4884A;--arena:#E9D9BC;--linea:#cbb994}
+*{box-sizing:border-box}body{margin:0;background:var(--hueso);color:var(--obs);font:16px/1.55 Inter,system-ui,sans-serif}
+main{max-width:620px;margin:0 auto;padding:28px 16px 48px}
+.marca{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--oro)}
+h1{font:600 30px/1.15 Fraunces,Georgia,serif;margin:10px 0 8px}h2{font:600 21px/1.2 Fraunces,Georgia,serif;margin:30px 0 6px}
+.lead{font-size:17px}.nota{font-size:13px;color:#5d5345}
+form{background:#fff8ec;border:1px solid var(--linea);border-radius:14px;padding:18px;margin-top:18px}
+label{display:block;font-size:14px;margin:12px 0 4px}input[type=text],input[type=email]{width:100%;padding:14px;font:inherit;border:1px solid var(--linea);border-radius:10px;background:#fffdf8}
+.check{display:flex;gap:8px;align-items:flex-start;font-size:13px;margin-top:14px}.check input{margin-top:3px}
+button{width:100%;margin-top:16px;padding:15px;font:600 16px Inter,sans-serif;background:var(--obs);color:var(--hueso);border:0;border-radius:10px;cursor:pointer}
+.error{display:none;color:#a33;font-size:14px;margin-top:10px}
+.libro{margin-top:26px;padding-top:6px;border-top:1px solid var(--linea)}.libro:first-of-type{border-top:0}
+.pista{background:#fff8ec;border:1px solid var(--linea);border-radius:12px;padding:12px 14px;margin:10px 0}
+.pista b{font-family:Fraunces,Georgia,serif;font-weight:600}.pista span{display:block;font-size:13px;color:#5d5345;margin:2px 0 8px}
+audio{width:100%}.pista.aqui{border-color:var(--oro);box-shadow:0 0 0 2px var(--oro)}#audios{display:none}.pie{margin-top:40px;font-size:12px;color:#5d5345}
+</style></head>
+<body><main>
+<div class="marca">Gabriela Gonzalo Ancestral</div>
+<h1>Los audios de tus libros</h1>
+<p class="lead">Aquí están los audios de los libros de la saga: las prácticas guiadas con la voz de Gabriela y los viajes con su tambor. Se escuchan en esta página, cuando quieras y las veces que quieras.</p>
+<p class="nota">La voz es de Gabriela, sintetizada a partir de su voz real. El tambor es el suyo, grabado el 1 de noviembre de 2026. El tambor monótono del viaje es el que describe Michael Harner en <i>The Way of the Shaman</i> (1980); Gabriela se formó con la Fundación de Estudios Chamánicos que él fundó. No los escuches mientras conduces.</p>
+
+<p class="nota" id="ok" style="display:none">Correo confirmado. Gracias.</p>
+<form id="acceso" method="POST" action="https://bbf2f8a8.sibforms.com/serve/MUIFAF9V4zx4McknOMbJfW-CHgFpw9Fw--w8G1NZFlyupzGlFrhJuJnYn2OVXu4Ml-9sGLsRxfPviLtdTnvKPkcr7h8K1PDo_brD4jKxA71zujJPXEJYxR7HVWTYZdes43ik5A1BlAZ5Vu_y0I6Ex0Ht849KJ1vCntF5nJYK3GZrIyI1_2WYSX40sXWETDBvsuKAPzCPI-NC4go_Bw==" novalidate>
+  <label for="nombre">Tu nombre</label><input type="text" id="nombre" name="FIRSTNAME" autocomplete="given-name" required>
+  <label for="email">Tu correo</label><input type="email" id="email" name="EMAIL" autocomplete="email" required>
+  <input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" autocomplete="off">
+  <label class="check"><input type="checkbox" name="OPT_IN" value="1" required><span>Acepto recibir por correo contenido de Gabriela Gonzalo sobre los libros y sus prácticas. Puedo darme de baja cuando quiera. Leí la <a href="/privacidad/" target="_blank">política de privacidad</a>.</span></label>
+  <button type="submit" id="entrar">Entrar a los audios</button>
+  <p class="error" id="error"></p>
+</form>
+
+<section id="audios">
+  <div class="libro" id="cierro"><h2>Cierro, elijo, inicio</h2><p class="nota">Siete días para cerrar el año. Escucha cada audio el día que el libro lo indica.</p>
+    <div class="pista" id="cierro-bienvenida"><b>Bienvenida</b><span>1 min · Antes de empezar</span><audio controls controlslist="nodownload" preload="none" src="a/cierro-bienvenida.mp3"></audio></div>
+    <div class="pista" id="cierro-inventario"><b>Día 1 · El inventario, guiado</b><span>10 min · Con el cuaderno abierto</span><audio controls controlslist="nodownload" preload="none" src="a/cierro-inventario.mp3"></audio></div>
+    <div class="pista" id="cierro-diciembre"><b>Día 5 · El diciembre que viene, cumplido</b><span>16 min · Con los ojos cerrados</span><audio controls controlslist="nodownload" preload="none" src="a/cierro-diciembre.mp3"></audio></div>
+    <div class="pista" id="cierro-viaje"><b>Día 7 · El viaje de cierre</b><span>21 min · Un minuto de voz y el tambor. Con auriculares</span><audio controls controlslist="nodownload" preload="none" src="a/cierro-viaje.mp3"></audio></div>
+    <div class="pista" id="cierro-despedida"><b>Al terminar · Despedida</b><span>1 min · Cuando acabes el libro</span><audio controls controlslist="nodownload" preload="none" src="a/cierro-despedida.mp3"></audio></div>
+  </div>
+  <div class="libro" id="cuerpo"><h2>El cuerpo en alerta</h2><p class="nota">Empieza por «Encuentra tu zona». Después, la práctica y el viaje de tu zona.</p>
+    <div class="pista" id="cuerpo-bienvenida"><b>Bienvenida</b><span>1 min · Cómo se usa el libro</span><audio controls controlslist="nodownload" preload="none" src="a/cuerpo-bienvenida.mp3"></audio></div>
+    <div class="pista" id="cuerpo-zona"><b>Encuentra tu zona</b><span>4 min · Recorre las seis zonas</span><audio controls controlslist="nodownload" preload="none" src="a/cuerpo-zona.mp3"></audio></div>
+    <div class="pista" id="cuerpo-z1"><b>Mandíbula · La lengua en el paladar</b><span>7 min · Práctica guiada</span><audio controls controlslist="nodownload" preload="none" src="a/cuerpo-z1.mp3"></audio></div>
+    <div class="pista" id="cuerpo-z2"><b>Garganta · Gárgaras y voz lenta</b><span>8 min · Práctica guiada · ten un vaso de agua</span><audio controls controlslist="nodownload" preload="none" src="a/cuerpo-z2.mp3"></audio></div>
+    <div class="pista" id="cuerpo-z3"><b>Pecho · Abrir las costillas</b><span>6 min · Práctica guiada</span><audio controls controlslist="nodownload" preload="none" src="a/cuerpo-z3.mp3"></audio></div>
+    <div class="pista" id="cuerpo-z4"><b>Estómago · Respiración con peso</b><span>9 min · Práctica guiada · ten un libro cerca</span><audio controls controlslist="nodownload" preload="none" src="a/cuerpo-z4.mp3"></audio></div>
+    <div class="pista" id="cuerpo-z5"><b>Hombros · Dejar el peso en el suelo</b><span>6 min · Práctica guiada</span><audio controls controlslist="nodownload" preload="none" src="a/cuerpo-z5.mp3"></audio></div>
+    <div class="pista" id="cuerpo-z6"><b>Espalda baja · Descanso constructivo</b><span>14 min · Práctica guiada · tumbada</span><audio controls controlslist="nodownload" preload="none" src="a/cuerpo-z6.mp3"></audio></div>
+    <div class="pista" id="cuerpo-v1"><b>Viaje 1 · Mandíbula</b><span>11 min · Un minuto de voz y el tambor. Con auriculares</span><audio controls controlslist="nodownload" preload="none" src="a/cuerpo-v1.mp3"></audio></div>
+    <div class="pista" id="cuerpo-v2"><b>Viaje 2 · Garganta</b><span>11 min · Un minuto de voz y el tambor. Con auriculares</span><audio controls controlslist="nodownload" preload="none" src="a/cuerpo-v2.mp3"></audio></div>
+    <div class="pista" id="cuerpo-v3"><b>Viaje 3 · Pecho</b><span>11 min · Un minuto de voz y el tambor. Con auriculares</span><audio controls controlslist="nodownload" preload="none" src="a/cuerpo-v3.mp3"></audio></div>
+    <div class="pista" id="cuerpo-v4"><b>Viaje 4 · Estómago</b><span>11 min · Un minuto de voz y el tambor. Con auriculares</span><audio controls controlslist="nodownload" preload="none" src="a/cuerpo-v4.mp3"></audio></div>
+    <div class="pista" id="cuerpo-v5"><b>Viaje 5 · Hombros</b><span>11 min · Un minuto de voz y el tambor. Con auriculares</span><audio controls controlslist="nodownload" preload="none" src="a/cuerpo-v5.mp3"></audio></div>
+    <div class="pista" id="cuerpo-v6"><b>Viaje 6 · Espalda baja</b><span>11 min · Un minuto de voz y el tambor. Con auriculares</span><audio controls controlslist="nodownload" preload="none" src="a/cuerpo-v6.mp3"></audio></div>
+  </div>
+  <div class="libro" id="ejecutiva"><h2>Llegar a todo y no estar en nada</h2><p class="nota">Los audios del libro para el día a día de trabajo.</p>
+    <div class="pista" id="ejecutiva-bienvenida"><b>Bienvenida</b><span>1 min · Antes de empezar</span><audio controls controlslist="nodownload" preload="none" src="a/ejecutiva-bienvenida.mp3"></audio></div>
+    <div class="pista" id="ejecutiva-90s"><b>Los 90 segundos</b><span>2 min · Antes de una reunión difícil</span><audio controls controlslist="nodownload" preload="none" src="a/ejecutiva-90s.mp3"></audio></div>
+    <div class="pista" id="ejecutiva-cierre"><b>Capítulo 9 · El cierre del día</b><span>2 min · Al acabar la jornada</span><audio controls controlslist="nodownload" preload="none" src="a/ejecutiva-cierre.mp3"></audio></div>
+    <div class="pista" id="ejecutiva-viernes"><b>Las tres preguntas del viernes</b><span>5 min · Una vez por semana</span><audio controls controlslist="nodownload" preload="none" src="a/ejecutiva-viernes.mp3"></audio></div>
+    <div class="pista" id="ejecutiva-despedida"><b>Al terminar · Despedida</b><span>1 min · Cuando acabes el libro</span><audio controls controlslist="nodownload" preload="none" src="a/ejecutiva-despedida.mp3"></audio></div>
+  </div>
+</section>
+<p class="pie">Material educativo; no sustituye atención médica ni psicológica. · <a href="/privacidad/">Privacidad</a> · @gabrielagonzalo.ancestral</p>
+</main>
+<script>
+// Acceso con correo: no hace imposible compartir (una URL siempre se puede pasar), pero evita que circule el archivo suelto
+// y deja un correo por cada persona que entra. ?libro=cuerpo|cierro|ejecutiva lleva directo a su sección.
+const K='gga-audios-libros', f=document.getElementById('acceso'), err=document.getElementById('error'), btn=document.getElementById('entrar');
+function abrir(){f.style.display='none';document.getElementById('audios').style.display='block';
+  try{const q=new URLSearchParams(location.search),l=q.get('libro'),v=q.get('viaje');let a=q.get('a');if(!a&&v)a='v'+v;
+    const el=(l&&a&&document.getElementById(l+'-'+a))||(l&&document.getElementById(l));
+    if(el){el.scrollIntoView({block:'center'});if(el.classList.contains('pista'))el.classList.add('aqui');}}catch(e){}}
+try{if(new URLSearchParams(location.search).get('ok')){document.getElementById('ok').style.display='block';try{localStorage.setItem(K,'1')}catch(e){}}if(localStorage.getItem(K))abrir();}catch(e){}
+document.addEventListener('contextmenu',e=>{if(e.target.tagName==='AUDIO')e.preventDefault();});
+f.addEventListener('submit',async e=>{e.preventDefault();err.style.display='none';let m='';
+  if(!f.FIRSTNAME.value.trim())m='Falta tu nombre.';else if(!/^\S+@\S+\.\S+$/.test(f.EMAIL.value.trim()))m='Revisa el correo.';else if(!f.OPT_IN.checked)m='Marca la casilla para entrar.';
+  if(m){err.textContent=m;err.style.display='block';return;} if(f.email_address_check.value)return;
+  btn.disabled=true;btn.textContent='Abriendo…';
+  let libro='';try{libro=(new URLSearchParams(location.search).get('libro')||'').replace(/[^a-z]/g,'').slice(0,20);}catch(e){}
+  const d=new URLSearchParams();d.set('FIRSTNAME',f.FIRSTNAME.value.trim());d.set('EMAIL',f.EMAIL.value.trim());d.set('email_address_check','');d.set('locale','es');
+  d.set('GGA_SOURCE','libro-'+(libro||'qr'));d.set('GGA_CAMPAIGN','AUDIOS-LIBROS');
+  try{await fetch(f.action,{method:'POST',mode:'no-cors',body:d});try{localStorage.setItem(K,'1');}catch(e){}abrir();}
+  catch(x){btn.disabled=false;btn.textContent='Entrar a los audios';err.textContent='No se pudo enviar. Revisa tu conexión y vuelve a intentarlo.';err.style.display='block';}
+});
+</script>
+</body></html>
