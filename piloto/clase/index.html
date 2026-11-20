@@ -110,17 +110,17 @@ body.abierta .reproductor,body.abierta .hecho{display:block}
     <span class="dur">12:00</span>
   </button>
   <!-- Mientras YOUTUBE_ID y MP4 estén vacíos la clase no se abre: se promete el correo. Cuando exista el vídeo, volver a «se abre al momento». -->
-  <p class="bajo">Deja tus datos y te mando la clase al correo en cuanto esté lista.<br><b>Con el mismo registro tienes plaza en el directo de principios de diciembre.</b> Todo gratis.</p>
+  <p class="bajo">Deja tus datos y te mando la clase al correo en cuanto esté lista.<br><b>Con el mismo registro tienes plaza en el directo del martes 1 de diciembre a las 20:00 (hora de Madrid).</b> Todo gratis.</p>
 
   <div class="reproductor" id="reproductor"></div>
   <div class="hecho" id="hecho">
     <h3>Ya tienes tu plaza en el directo</h3>
     <a class="ir" id="grupo" href="#" target="_blank" rel="noopener">Entrar a El Círculo en WhatsApp</a>
-    <p class="aviso">Al final de la clase te invito al directo de principios de diciembre. <b>Ya estás dentro con el registro que acabas de hacer: no tienes que registrarte otra vez.</b></p>
+    <p class="aviso">Al final de la clase te invito al directo del martes 1 de diciembre a las 20:00 (hora de Madrid). <b>Ya estás dentro con el registro que acabas de hacer: no tienes que registrarte otra vez.</b></p>
     <ol class="pasos">
       <li><b>Mira la clase</b>: son 12 minutos. Si aún no está arriba, te llega al correo.</li>
       <li><b>Entra a El Círculo · Aprende con Gabriela</b>, mi comunidad de WhatsApp. Ahí mando el enlace del Zoom el mismo día.</li>
-      <li><b>El directo es a principios de diciembre.</b> La fecha y la hora en tu país te llegan por El Círculo y por correo. En directo hacemos la práctica de 10 minutos y respondo tus preguntas.</li>
+      <li><b>El directo es el martes 1 de diciembre a las 20:00 (hora de Madrid).</b> La hora en tu país te llega por El Círculo y por correo. En directo hacemos la práctica de 10 minutos y respondo tus preguntas.</li>
     </ol>
     <div class="vivo">
       <b>Principios de diciembre · En directo por Zoom · Gratis</b>
@@ -136,7 +136,7 @@ body.abierta .reproductor,body.abierta .hecho{display:block}
   <form id="registro" method="POST" action="https://bbf2f8a8.sibforms.com/serve/MUIFAH6SikKFY8eR9vngQDJAhDz6P4fhBxDB4BvK8kq2AAp1R9E6-foSxxegm78ZURj4POZa41agleL01jTpEwa0mF0BNVM7ONNyViW_m2RRMre80tWt3sr9MybQPDxdOz4uSQIsrFRrmIEPGHCqfUm66Ws8M-Lx3vCEYhx-ofnCEcPeD-CS-7esiOHsiWyT7DoFOyUBwoIYXseZVQ==" novalidate>
     <button class="cerrar" type="button" id="cerrar" aria-label="Cerrar">×</button>
     <h3 id="tit">¿A dónde te mando la clase?</h3>
-    <p class="sub">Te la mando al correo en cuanto esté lista. Y te guardo plaza en el directo de principios de diciembre.</p>
+    <p class="sub">Te la mando al correo en cuanto esté lista. Y te guardo plaza en el directo del martes 1 de diciembre a las 20:00 (hora de Madrid).</p>
     <label for="nombre">Tu nombre</label>
     <input type="text" id="nombre" name="FIRSTNAME" autocomplete="given-name" required>
     <label for="email">Tu correo</label>
@@ -221,7 +221,7 @@ function origen(){
   return v||'directo';
 }
 
-  const d=new URLSearchParams();d.set('FIRSTNAME',f.FIRSTNAME.value.trim());d.set('EMAIL',f.EMAIL.value.trim());d.set('GGA_WHATSAPP',f.WHATSAPP__COUNTRY_CODE.value+' '+wa);d.set('email_address_check','');d.set('locale','es');d.set('GGA_SOURCE',origen());d.set('GGA_CAMPAIGN','MASTERCLASS-1DIC');
+  const d=new URLSearchParams();d.set('FIRSTNAME',f.FIRSTNAME.value.trim());d.set('EMAIL',f.EMAIL.value.trim());d.set('GGA_WHATSAPP',f.WHATSAPP__COUNTRY_CODE.value+' '+wa);d.set('email_address_check','');d.set('locale','es');d.set('GGA_SOURCE',origen());d.set('GGA_CAMPAIGN','MASTERCLASS-1DIC-CLASE');
   try{
     await fetch(f.action,{method:'POST',mode:'no-cors',body:d});
     try{localStorage.setItem(LLAVE,'1');}catch(x){}
