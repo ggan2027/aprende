@@ -19,6 +19,7 @@ body{background:var(--marfil);color:var(--texto);font:400 17px/1.6 Inter,system-
 h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(34px,8vw,52px);line-height:1.08;margin:12px 0 18px;color:var(--obsidiana)}
 .promesa{font-size:19px;line-height:1.55}
 .fecha{display:flex;flex-wrap:wrap;gap:8px 18px;margin:22px 0 8px;padding:16px 18px;background:var(--arena);border-radius:12px;font-weight:500}
+.quien{font-size:14px;color:var(--suave);margin:12px 0 0;line-height:1.5}
 .fecha small{display:block;width:100%;font-weight:400;color:var(--suave);font-size:14px}
 .video{margin:26px 0;aspect-ratio:9/16;max-height:520px;width:100%;background:var(--tierra);border-radius:14px;display:flex;align-items:center;justify-content:center;color:#EDE4D3;font-size:15px;text-align:center;padding:20px;overflow:hidden}
 .video video{width:100%;height:100%;object-fit:cover}
@@ -49,17 +50,18 @@ button:disabled{opacity:.6}
   <div class="eyebrow">Masterclass gratuita · martes 1 de diciembre</div>
   <h1>Deja de vivir en piloto automático</h1>
   <p class="promesa">En 90 minutos vas a identificar en cuál de las 5 áreas te estás desconectando, y te vas con una práctica de 10 minutos que puedes hacer esta misma noche.</p>
+  <p style="margin-top:12px">Las 5 áreas: cuerpo · emociones · mente · vínculos · propósito. En la masterclass identificas en cuál estás tú.</p>
 
   <div class="fecha">
     <span>Martes 1 de diciembre · 20:00 Madrid</span><span>En directo por Zoom</span><span>Gratis</span>
     <small>Plazas limitadas. 14:00 en Miami y Bogotá · 13:00 en Ciudad de México · 16:00 en Buenos Aires y Santiago.</small>
   </div>
+  <p class="quien">Gabriela. +20 años en el mundo corporativo, +10 en prácticas ancestrales.<br>Certificada por la Foundation for Shamanic Studies.</p>
 
   <h2>Si reservas ahora</h2>
   <ul class="lista">
     <li>Te guardo tu plaza para el martes 1 de diciembre a las 20:00.</li>
-    <li>Te mando el recordatorio y el enlace de Zoom el mismo día.</li>
-    <li>Tienes prioridad para las 5 plazas con bonos gratis que abro ese día.</li>
+    <li>Te mando el recordatorio y el enlace de Zoom el mismo día, por correo y en el grupo de WhatsApp.</li>
     <li>Entras ya en El Círculo, mi comunidad de WhatsApp.</li>
   </ul>
 
@@ -68,16 +70,7 @@ button:disabled{opacity:.6}
   <!-- VÍDEO: cuando Gabriela lo grabe, quitar style="display:none" y poner <video src="piloto-1min.mp4" controls playsinline poster="piloto-1min.jpg"></video> dentro -->
   <div class="video" id="video" style="display:none"></div>
 
-  <h2>En la masterclass</h2>
-  <ul class="lista">
-    <li>Por qué el cuerpo suele ser la primera señal de que estás funcionando en automático.</li>
-    <li>El mapa de las 5 áreas —cuerpo, emociones, mente, vínculos y propósito— y una autoevaluación en directo para ver en cuál te estás desconectando.</li>
-    <li>Una práctica de 10 minutos que hacemos en directo y puedes repetir esa misma noche.</li>
-    <li>Preguntas en vivo al final.</li>
-  </ul>
 
-  <h2>Con quién</h2>
-  <p>Soy Gabriela Gonzalo. Soy ejecutiva y trabajo con prácticas ancestrales adaptadas a la vida de hoy. Estoy certificada por la Foundation for Shamanic Studies, de Michael Harner, y trabajo con muchísimas personas que viven con la agenda llena y el cuerpo avisando.</p>
 
   <form id="registro" method="POST" action="https://bbf2f8a8.sibforms.com/serve/MUIFAK9XKw2hgRKDz6exiV92sO9WQdEUHg07D7-qPEgdOug4X5fcAbfFAdg2X9j2Qc1LuXaJvg2mnKIHH3v5znPF8ih8ISmF_wDh4_lyzLN9rFNkaZZzuRLIjbxTomp6CjE69tNBzsUw5gz1eFhz3gLJqV5ywTep8UYI8zM4XcaAelxTmUjt0iQwnVARVvGjp-sI7UXn0Rc128MTMQ==" novalidate>
     <h2 style="margin-top:0">Reserva tu plaza</h2>
@@ -90,7 +83,7 @@ button:disabled{opacity:.6}
     <input type="tel" id="wa" name="WHATSAPP" autocomplete="tel-national" inputmode="tel" placeholder="Tu número" required></div>
     <input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" autocomplete="new-password">
     <input type="hidden" name="locale" value="es">
-    <label class="check"><input type="checkbox" name="OPT_IN" value="1" required><span>Acepto recibir por correo y WhatsApp la fecha y el enlace de la masterclass, los recordatorios y contenido de Gabriela Gonzalo. Puedo darme de baja cuando quiera. Leí la <a href="/privacidad/" target="_blank">política de privacidad</a>.</span></label>
+    <label class="check"><input type="checkbox" name="OPT_IN" value="1" required><span>Acepto recibir por correo y en el grupo de WhatsApp la fecha y el enlace de la masterclass, los recordatorios y contenido de Gabriela Gonzalo. Puedo darme de baja cuando quiera. Leí la <a href="/privacidad/" target="_blank">política de privacidad</a>.</span></label>
     <button type="submit" id="enviar">Reservar mi plaza</button>
     <p class="error" id="error"></p>
     <p class="nota">Al reservar entras en El Círculo, mi comunidad de WhatsApp.</p>
